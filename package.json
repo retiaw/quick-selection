@@ -1,0 +1,60 @@
+{
+  "name": "quick-selection",
+  "displayName": "Quick Selection",
+  "description": "Insert selected file-line references into the integrated terminal for agent CLIs.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "license": "MIT",
+  "keywords": [
+    "cursor",
+    "agent",
+    "agent-cli",
+    "terminal",
+    "selection"
+  ],
+  "files": [
+    "extension.js",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:quickSelection.insert",
+    "onCommand:selectionReferenceToTerminal.insert",
+    "onCommand:quickPasteSelectionToTerminal"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quickSelection.insert",
+        "title": "Insert Selection Reference In Terminal",
+        "category": "Agent CLI"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "quickSelection.insert",
+        "key": "ctrl+shift+enter",
+        "mac": "cmd+l",
+        "linux": "ctrl+shift+enter",
+        "win": "ctrl+shift+enter",
+        "when": "editorTextFocus && editorHasSelection"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "node --check extension.js",
+    "test": "node test/run-tests.js",
+    "package": "npx @vscode/vsce package --allow-missing-repository"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.2.2"
+  }
+}
