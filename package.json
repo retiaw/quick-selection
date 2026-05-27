@@ -58,10 +58,10 @@
     ]
   },
   "scripts": {
-    "lint": "node --check extension.js",
+    "lint": "node --check extension.js && node --check scripts/install-cursor.js",
     "test": "node test/run-tests.js",
     "package": "npx @vscode/vsce package",
-    "publish:openvsx": "npx ovsx publish --skip-duplicate"
+    "install:cursor": "npm run package && node scripts/install-cursor.js"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.2.2"

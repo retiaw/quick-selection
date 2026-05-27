@@ -2,17 +2,25 @@
 
 Insert the active Cursor editor selection's file-line reference into the integrated terminal for any agent CLI.
 
-## Install From Cursor
+## Install Locally In Cursor
 
-Quick Selection's marketplace extension ID is `retiaw.quick-selection`.
+This project is intended for local Cursor installation.
 
-After the extension is published to Open VSX and synced by Cursor, install it from Cursor:
+From the repository root:
 
-1. Open Extensions.
-2. Search for `Quick Selection` or `quick-selection`.
-3. Install the extension named **Quick Selection**.
+```sh
+npm install
+npm run install:cursor
+```
 
-Cursor syncs extensions from Open VSX. If the listing does not appear immediately after a new release, search again later or install the `.vsix` from the GitHub release.
+This builds `quick-selection-0.1.0.vsix` and installs it into Cursor using Cursor's CLI.
+
+You can also install the VSIX manually:
+
+1. Run `npm run package`.
+2. Open Cursor.
+3. Run **Extensions: Install from VSIX...** from the command palette.
+4. Select the generated `.vsix` file.
 
 ## Behavior
 
@@ -48,14 +56,14 @@ npm run package
 
 The keybinding only applies when the editor is focused and text is selected.
 
-## Install Locally
+## Build Only
 
 ```sh
 npm install
 npm run package
 ```
 
-Then install the generated `.vsix` file in Cursor.
+The generated VSIX can be copied to another machine and installed with Cursor's **Extensions: Install from VSIX...** command.
 
 ## Why Not Only `keybindings.json`?
 
