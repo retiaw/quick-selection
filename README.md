@@ -4,9 +4,9 @@ Insert the active Cursor editor selection's file-line reference into the integra
 
 ## Install From Cursor
 
-Quick Selection is published as `retiaw.quick-selection`.
+Quick Selection's marketplace extension ID is `retiaw.quick-selection`.
 
-In Cursor:
+After the extension is published to Open VSX and synced by Cursor, install it from Cursor:
 
 1. Open Extensions.
 2. Search for `Quick Selection` or `quick-selection`.
