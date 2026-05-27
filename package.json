@@ -3,8 +3,16 @@
   "displayName": "Quick Selection",
   "description": "Insert selected file-line references into the integrated terminal for agent CLIs.",
   "version": "0.1.0",
-  "publisher": "local",
+  "publisher": "retiaw",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/retiaw/quick-selection.git"
+  },
+  "homepage": "https://github.com/retiaw/quick-selection#readme",
+  "bugs": {
+    "url": "https://github.com/retiaw/quick-selection/issues"
+  },
   "keywords": [
     "cursor",
     "agent",
@@ -52,7 +60,8 @@
   "scripts": {
     "lint": "node --check extension.js",
     "test": "node test/run-tests.js",
-    "package": "npx @vscode/vsce package --allow-missing-repository"
+    "package": "npx @vscode/vsce package",
+    "publish:openvsx": "npx ovsx publish"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.2.2"

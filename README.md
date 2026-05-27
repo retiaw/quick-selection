@@ -2,6 +2,18 @@
 
 Insert the active Cursor editor selection's file-line reference into the integrated terminal for any agent CLI.
 
+## Install From Cursor
+
+Quick Selection is published as `retiaw.quick-selection`.
+
+In Cursor:
+
+1. Open Extensions.
+2. Search for `Quick Selection` or `quick-selection`.
+3. Install the extension named **Quick Selection**.
+
+Cursor syncs extensions from Open VSX. If the listing does not appear immediately after a new release, search again later or install the `.vsix` from the GitHub release.
+
 ## Behavior
 
 - Reads the current active editor selection range.
